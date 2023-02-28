@@ -1,0 +1,14 @@
+#!/bin/bash
+
+ERROR=0
+
+if ! bash ./.githooks/check-fmt.sh; then
+  ERROR=1
+fi
+
+if ! bash ./.githooks/check-warnings.sh; then
+  ERROR=1
+fi
+
+echo "---"
+exit $ERROR
