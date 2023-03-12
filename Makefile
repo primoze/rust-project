@@ -3,7 +3,7 @@
 all: release
 
 init:
-	ln -sf rust-bin/config ../config
+	ln -sf rust-bin/config config
 	rustup component add rustfmt
 	rustup component add clippy
 	git config core.hooksPath .githooks
